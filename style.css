@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: #fff;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+#score {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+#gameoverscreen {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#gameoverscreen .backdrop {
+  background: #000;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+}
+
+#gameoverscreen .title,
+#gameoverscreen .score,
+#gameoverscreen button {
+  position: absolute;
+  z-index: 1;
+  left: calc(50% - 102px);
+  width: 204px;
+  top: 40%;
+  text-align: center;
+  color: rgb(255, 100, 74);
+}
+
+#gameoverscreen .title {
+  margin-top: -65px;
+  font-size: 35px;
+}
+
+#gameoverscreen button {
+  margin-top: 50px;
+  color: #000;
+  font-size: 24px;
+  padding: 5px 25px;
+  cursor: pointer;
+  border: 0;
+}
+
+#star {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  background: url("./img/star.png");
+  background-position: center;
+  background-size: contain;
+  /* left: 30vw;
+  top: 50vh; */
+}
+
+#game {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url("./img/world.jpg");
+  background-position: center left;
+}
+
+#block {
+  width: 45px;
+  height: 100vh;
+  background: url("./img/blockbg.jpg");
+  background-position: center;
+  background-size: contain;
+  position: relative;
+  /* animation: blockAnimation 2s infinite; */
+}
+
+#hole {
+  width: 47px;
+  height: 193px;
+  position: relative;
+  background: url("./img/holebg.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  top: -800px;
+}
+
+#block,
+#hole {
+  left: 10vw;
+}
+
+/* #block,
+#hole {
+  left: 40vw;
+  animation: blockAnimation 2s infinite linear;
+} */
+
+#character {
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  background: url("./img/bird.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 20vh;
+  left: 20vw;
+}
+
+.go-up {
+  animation: rotateUp 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.go-down {
+  animation: rotateDown 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes blockAnimation {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: -50px;
+  }
+}
+
+@keyframes rotateUp {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-35deg);
+  }
+}
+
+@keyframes rotateDown {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(35deg);
+  }
+}
+
+@keyframes starAnimation1 {
+  0% {
+    left: 50vw;
+  }
+  100% {
+    left: -50px;
+  }
+}
+
+@keyframes starAnimation2 {
+  0% {
+    left: 60vw;
+  }
+  100% {
+    left: -50px;
+  }
+}
+
+@keyframes starAnimation3 {
+  0% {
+    left: 70vw;
+  }
+  100% {
+    left: -50px;
+  }
+}
+
+@keyframes starAnimation4 {
+  0% {
+    left: 80vw;
+  }
+  100% {
+    left: -50px;
+  }
+}
+
+@keyframes starAnimation5 {
+  0% {
+    left: 90vw;
+  }
+  100% {
+    left: -50px;
+  }
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position-x: 100vw;
+  }
+  100% {
+    background-position-x: 0;
+  }
+}
