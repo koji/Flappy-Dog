@@ -77,6 +77,7 @@ const characterJump = () => {
 
     if (jumpCount > 20) {
       const jumpSound = new Audio("./sounds/fly.wav");
+      jumpSound.volume = 0.2;
       jumpSound.play();
       clearInterval(jumpInterval);
       isJumping = false;
@@ -98,6 +99,7 @@ const handleStarDetection = () => {
   if (star.style.display === "none") return;
   if (detectCollision(character, star)) {
     const getStarSound = new Audio("./sounds/star.wav");
+    getStarSound.volume = 0.2;
     getStarSound.play();
     scoreTotal += 150;
     hideStar();
@@ -155,6 +157,7 @@ const handleCharacterCollisions = () => {
     soundCount++;
     if (soundCount > 35) {
       const holeSound = new Audio("./sounds/hole.wav");
+      holeSound.volume = 0.2;
       holeSound.play();
       soundCount = 0;
     }
@@ -189,6 +192,7 @@ const handleCharacterPosition = (diff) => {
 
 const gameOver = () => {
   const gameOverSound = new Audio("./sounds/gameover.wav");
+  gameOverSound.volume = 0.2;
   gameOverSound.play();
   // console.log("game over");
   gameStopped = true;
