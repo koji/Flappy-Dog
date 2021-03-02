@@ -1,6 +1,9 @@
 # Flappy-Dog
 Flappy Bird's dog version
 
+site  
+https://flappydog.netlify.app/   
+
 ## run a game
 ```zsh
 $ npx live-server
